@@ -1,13 +1,10 @@
-@font-face {
-    font-family: 'Vermin Vibes';
-    src: url('https://cdn.jsdelivr.net/gh/fakasy/Nolyx/Fonts/vermin_vibes.ttf') format('truetype');
 
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 #vermin {
-    font-family: 'Vermin Vibes', sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
+
 
 .product-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
