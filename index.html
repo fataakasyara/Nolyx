@@ -5,49 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <title>Nolyx - Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Nolyx Design</title>
     <style>
-        @font-face {
-            font-family: 'Vermin Vibes';
-            src: url('fonts/vermin_vibes.ttf') format('truetype');
-        }
-
-        #vermin {
-            font-family: 'Vermin Vibes', sans-serif;
-        }
-
-        .product-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .cart-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: #047857;
-            color: white;
-            border-radius: 50%;
-            padding: 4px 8px;
-            font-size: 12px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .product-grid {
-                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-                gap: 1rem;
-            }
-        }
 
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/400');
@@ -78,15 +38,14 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#kaos" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Shirts</a>
-                    <a href="#hoodie" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Hoodies</a>
-                    <a href="#celana" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Pants</a>
-                    <a href="#topi" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Caps</a>
+                    <a href="products/shirt.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Shirts</a>
+                    <a href="products/hoodie.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Hoodies</a>
+                    <a href="products/pants.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Pants</a>
+                    <a href="products/caps.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Caps</a>
                     <div class="relative">
-                        <button class="text-gray-700 hover:text-green-700">
+                        <a href="cart.html" class="text-gray-700 hover:text-green-700">
                             <i class="fas fa-shopping-cart text-xl"></i>
-                            <span class="cart-badge">0</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -102,15 +61,15 @@
         <!-- Enhanced Mobile Menu -->
         <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
             <div class="px-4 py-2 space-y-3">
-                <a href="#kaos" class="block py-2 text-gray-700 hover:text-green-700">Shirts</a>
-                <a href="#hoodie" class="block py-2 text-gray-700 hover:text-green-700">Hoodies</a>
-                <a href="#celana" class="block py-2 text-gray-700 hover:text-green-700">Pants</a>
-                <a href="#topi" class="block py-2 text-gray-700 hover:text-green-700">Caps</a>
+                <a href="products/shirt.html" class="block py-2 text-gray-700 hover:text-green-700">Shirts</a>
+                <a href="products/hoodie.html" class="block py-2 text-gray-700 hover:text-green-700">Hoodies</a>
+                <a href="products/pants.html" class="block py-2 text-gray-700 hover:text-green-700">Pants</a>
+                <a href="products/caps.html" class="block py-2 text-gray-700 hover:text-green-700">Caps</a>
                 <div class="py-2">
-                    <button class="flex items-center text-gray-700">
+                    <a href="cart.html" class="flex items-center text-gray-700">
                         <i class="fas fa-shopping-cart mr-2"></i>
-                        Cart (0)
-                    </button>
+                        Cart 
+                    </a>
                 </div>
             </div>
         </div>
@@ -120,37 +79,37 @@
     <section class="hero-section h-96 flex items-center justify-center text-white mt-16">
         <div class="text-center">
             <h1 id="vermin" class="text-4xl md:text-6xl font-bold mb-4">Nolyx Design</h1>
-            <a href="#kaos" class="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full transition-colors">
+            <a href="#category" class="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full transition-colors">
                 Shop Now
             </a>
         </div>
     </section>
-    <section class="py-16 bg-gray-100">
+    <section id="category" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-800 mb-8">Shop by Category</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="#hoodie" class="relative group overflow-hidden rounded-lg">
+                <a href="products/shirt.html" class="relative group overflow-hidden rounded-lg">
+                    <img src="gambar/shirt.jpg" alt="Shirt" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">Shirt</span>
+                    </div>
+                </a>
+                <a href="products/hoodie.html" class="relative group overflow-hidden rounded-lg">
                     <img src="gambar/hoodie.png" alt="Hoodies" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <span class="text-white text-xl font-bold">Hoodies</span>
                     </div>
                 </a>
-                <a href="#celana" class="relative group overflow-hidden rounded-lg">
+                <a href="products/pants.html" class="relative group overflow-hidden rounded-lg">
                     <img src="/api/placeholder/300/400" alt="Pants" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <span class="text-white text-xl font-bold">Pants</span>
                     </div>
                 </a>
-                <a href="#topi" class="relative group overflow-hidden rounded-lg">
+                <a href="products/caps.html" class="relative group overflow-hidden rounded-lg">
                     <img src="/api/placeholder/300/400" alt="Caps" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <span class="text-white text-xl font-bold">Caps</span>
-                    </div>
-                </a>
-                <a href="#accessories" class="relative group overflow-hidden rounded-lg">
-                    <img src="gambar/shirt.jpg" alt="Accessories" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                        <span class="text-white text-xl font-bold">Shirt</span>
                     </div>
                 </a>
             </div>
@@ -161,11 +120,10 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-3xl font-bold text-gray-800">Best Seller</h2>
-                <a href="#" class="text-green-700 hover:text-green-800">View all</a>
             </div>
             <div class="product-grid">
                 <!-- Product Card 1 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div id="hoodieiamliar" class="product-card bg-white rounded-lg overflow-hidden shadow-md">
                     <div class="relative">
                         <img src="gambar/hoodieliar.png" alt="" class="w-full h-64 object-cover">
                         <div class="absolute top-2 right-2">
@@ -181,39 +139,19 @@
                                 <span class="ml-1 text-gray-600">4.5</span>
                             </div>
                         </div>
-                        <a href="#"target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md">
-                            <span class="font-bold">Buy Now</span>
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
+                        <div class="flex space-x-2">
+                            <a href="#" target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md">
+                                <span class="font-bold">Buy Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <button onclick="addToCart('hoodieiamliar')"  class="w-24 flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
+                                <i class="fas fa-shopping-cart ml-2"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Product Card 2 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="gambar/shirtmetro.jpg" alt="" class="w-full h-64 object-cover">
-                        <div class="absolute top-2 right-2">
-                            <span class="bg-red-500 text-white px-2 py-1 rounded-full text-sm">Sale</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Metro Spider</h3>
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <span class="text-green-700 font-bold">$23.17</span>
-                                <span class="text-gray-400 line-through ml-2">$34.99</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <span class="ml-1 text-gray-600">4.8</span>
-                            </div>
-                        </div>
-                        <a href="https://www.zazzle.com/metro_spider_t_shirt-256891848701353151" target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md">
-                            <span class="font-bold">Buy Now</span>
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
+
 
                 
             </div>
@@ -257,7 +195,7 @@
                         <img src="gambar/phgyjg.jpg" alt="Designer" class="w-full h-full object-cover">
                     </div>
                     <div class="p-8 md:w-2/3">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Lutung Kasyarung</h3>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Kasyara</h3>
                         <p class="text-gray-600 mb-6">Creative Director & Lead Designer</p>
                         <div class="grid grid-cols-3 gap-4 mb-8">
                             <div class="text-center p-4 bg-gray-50 rounded-lg">
@@ -281,58 +219,7 @@
 
 
 
-    <script>
-    
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when clicking menu items
-    const mobileMenuItems = mobileMenu.querySelectorAll('a');
-    mobileMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-            mobileMenu.classList.add('hidden');
-        }
-    });
-
-    // Prevent menu from closing when clicking inside it
-    mobileMenu.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-
-    // Close mobile menu when scrolling
-    window.addEventListener('scroll', () => {
-        if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-        }
-    });
-
-    // Add smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-        </script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>
