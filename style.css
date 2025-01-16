@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
-#vermin {
-    font-family: 'Permanent Marker', cursive;
+#vermin  {
+    font-family: 'Cinzel Decorative', serif;
 }
-
 
 
 .product-card {
