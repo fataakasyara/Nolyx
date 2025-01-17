@@ -8,123 +8,133 @@
     <link rel="stylesheet" href="style.css">
     <title>Nolyx Design</title>
 </head>
-<body">
-    
+<body class="bg-gray-50">
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-30 mt-0 -mb-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-4">
+                    <img src="gambar/nolyx.png" alt="Nolyx" class="h-10 w-10">
+                    <span id="vermin" class="text-2xl font-bold text-green-700">Nolyx</span>
+                </div>
 
-<nav class="fixed top-0 w-full bg-white shadow-lg z-30 mt-0  -mb-16">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between h-16">
-            <div class="flex items-center space-x-4">
-                <img src="gambar/nolyx.png" alt="Nolyx" class="h-10 w-10">
-                <span id="vermin" class="text-2xl font-bold text-green-700">Nolyx</span>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="products/shirt.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Shirts</a>
+                    <a href="products/hoodie.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Hoodies</a>
+                    <a href="products/wallart.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Wall Art</a>
+                    <a href="products/caps.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Caps</a>
+                    <div class="relative">
+                        <a href="index.html" class="text-gray-700 hover:text-green-700">
+                            <i class="fas fa-home text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700 p-2" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
+        </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="products/shirt.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Shirts</a>
-                <a href="products/hoodie.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Hoodies</a>
-                <a href="products/pants.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Pants</a>
-                <a href="products/caps.html" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Caps</a>
-                <div class="relative">
-                    <a href="index.html" class="text-gray-700 hover:text-green-700">
-                        <i class="fas fa-home text-xl"></i>
+        <!-- Enhanced Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 py-2 space-y-3">
+                <a href="products/shirt.html" class="block py-2 text-gray-700 hover:text-green-700">Shirts</a>
+                <a href="products/hoodie.html" class="block py-2 text-gray-700 hover:text-green-700">Hoodies</a>
+                <a href="products/wallart.html" class="block py-2 text-gray-700 hover:text-green-700">Wall Art</a>
+                <a href="products/caps.html" class="block py-2 text-gray-700 hover:text-green-700">Caps</a>
+                <div class="py-2">
+                    <a href="index.html" class="flex items-center text-gray-700">
+                        <i class="fas fa-home mr-2"></i>
+                        Home
                     </a>
                 </div>
             </div>
+        </div>
+    </nav>
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden flex items-center">
-                <button class="text-gray-700 p-2" id="mobile-menu-button">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+    <section class="hero-section h-28 flex items-center justify-center text-black mt-16 bg-gray-100">
+        <h1 class="text-3xl font-bold">Your Cart</h1>
+    </section>
+
+    <section id="fav" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="product-grid" id="cart-container">
+                <!-- Cart items will be loaded here -->
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Enhanced Mobile Menu -->
-    <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
-        <div class="px-4 py-2 space-y-3">
-            <a href="products/shirt.html" class="block py-2 text-gray-700 hover:text-green-700">Shirts</a>
-            <a href="products/hoodie.html" class="block py-2 text-gray-700 hover:text-green-700">Hoodies</a>
-            <a href="products/pants.html" class="block py-2 text-gray-700 hover:text-green-700">Pants</a>
-            <a href="products/caps.html" class="block py-2 text-gray-700 hover:text-green-700">Caps</a>
-            <div class="py-2">
-                <a href="index.html" class="flex items-center text-gray-700">
-                    <i class="fas fa-home mr-2"></i>
-                    Home
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-<section class="hero-section h-28 flex items-center justify-center text-black mt-16">
-    <h1 class="text-3xl font-bold">Your Cart</h1>
-</section>
-
-<section id="fav" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center mb-8">
-        </div>
-        <div class="product-grid">
-
-
-            <div id="cart-container" class="p-4"></div>
-
+    <script>
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.getElementById('cart-container');
             
-        </div>
-    </div>
-</section>
+            if (cart.length === 0) {
+                cartContainer.innerHTML = `
+                    <div class="col-span-full text-center py-8">
+                        <i class="fas fa-shopping-cart text-gray-400 text-5xl mb-4"></i>
+                        <p class="text-gray-500 text-lg">Your cart is empty</p>
+                        <a href="index.html" class="inline-block mt-4 px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colors">
+                            Continue Shopping
+                        </a>
+                    </div>`;
+                return;
+            }
 
+            cartContainer.innerHTML = cart.map(product => `
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg" id="product-${product.id}">
+                    <div class="relative">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2">
+                            <span class="bg-green-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                In Cart
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-3">${product.name}</h3>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-green-700 font-bold text-xl">${product.price}</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="${product.link}" target="_blank" 
+                               class="flex-1 flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-3 px-4 rounded-lg transition-colors shadow-md">
+                                <span class="font-bold">Buy Now</span>
+                            </a>
+                            <button onclick="removeFromCart('${product.id}')" 
+                                    class="flex-1 flex items-center justify-center bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-lg transition-colors shadow-md">
+                                <i class="fas fa-trash mr-2"></i>
+                                <span class="font-bold">Remove</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
 
-<script>
-function loadCart() {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const cartContainer = document.getElementById('cart-container');
+        function removeFromCart(productId) {
+            const productElement = document.getElementById(`product-${productId}`);
+            productElement.classList.add('fade-out');
+            
+            setTimeout(() => {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const updatedCart = cart.filter(product => product.id !== productId);
+                localStorage.setItem('cart', JSON.stringify(updatedCart));
+                loadCart();
+            }, 300);
+        }
 
-if (cart.length === 0) {
-    cartContainer.innerHTML = '<p>you should add item first.</p>';
-    return;
-}
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
 
-// Render semua produk di keranjang
-cart.forEach(product => {
-    cartContainer.innerHTML += `
-    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-    <div class="relative">
-        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover">
-        <div class="absolute top-2 right-2">
-            <span class="bg-green-700 text-white px-2 py-1 rounded-full text-sm">In Cart</span>
-        </div>
-    </div>
-    <div class="p-4">
-        <h3 class="text-lg font-semibold mb-2">${product.name}</h3>
-        <div class="flex justify-between items-center mb-4">
-            <span class="text-green-700 font-bold">${product.price}</span>
-        </div>
-        <div class="pdd flex space-x-2">
-            <a href="${product.link}" target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md">
-                <span class="font-bold">Buy Now</span>
-            </a>
-            <button onclick="removeFromCart('${product.id}')" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg shadow-md">
-                <i class="fas fa-trash ml-2"></i>
-            </button>
-        </div>
-    </div>
-</div>
-    `;
-});
-}
-
-function removeFromCart(productId) {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const updatedCart = cart.filter(product => product.id !== productId);
-localStorage.setItem('cart', JSON.stringify(updatedCart));
-loadCart(); // Reload halaman keranjang
-alert('Produk telah dihapus dari keranjang.');
-}
-
-loadCart(); // Panggil fungsi untuk load keranjang saat halaman dimuat
-</script>
-<script src="script.js"></script>
+        // Load cart on page load
+        loadCart();
+    </script>
 </body>
 </html>
