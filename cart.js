@@ -4,8 +4,9 @@ function addToCart(productId) {
 
     // Ambil informasi dari div (misalnya nama, harga, gambar)
     const name = productDiv.querySelector('h3').textContent;
-    const price = productDiv.querySelector('.text-green-700').textContent.replace('$', '');
+    const price = productDiv.querySelector('.text-green-700').textContent;
     const image = productDiv.querySelector('img').src;
+    const link = productDiv.querySelector('a').href;
 
     // Simpan data produk ke keranjang di localStorage
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -19,7 +20,7 @@ function addToCart(productId) {
     }
 
     // Buat objek produk
-    const product = { id: productId, name, price, image };
+    const product = { id: productId, name, price, image, link };
     
     // Tambahkan produk ke dalam cart
     cart.push(product);
