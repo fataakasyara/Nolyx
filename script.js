@@ -47,3 +47,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Create particles
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 650; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.width = Math.random() * 10 + 'px';
+        particle.style.height = particle.style.width;
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDuration = (Math.random() * 2 + 5) + 's';
+        particle.style.animationDelay = (Math.random() * 2) + 's';
+        particlesContainer.appendChild(particle);
+    }
+
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+});
