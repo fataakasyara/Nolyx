@@ -84,11 +84,38 @@
                 <h1 id="vermin" class="text-4xl md:text-6xl font-bold mb-4">Nolyx Wall Art</h1>
             </div>
         </section>
-        <section class="product py-16 max-w-7xl mx-auto px-4">
+        <section class="product py-8 md:py-16 max-w-7xl mx-auto px-4">
             <div class="product-grid">
-
+                <div id="choppedchinshirt" class="product-card bg-white rounded-lg overflow-hidden shadow-md mx-auto w-full"> 
+                    <div class="relative">
+                        <img src="..." alt="" class="w-full h-48 sm:h-64 object-cover"> 
+                        <div class="absolute top-2 right-2">
+                            <span class="bg-red-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Hot</span>
+                        </div>
+                    </div>
+                    <div class="p-3 sm:p-4"> 
+                        <h3 class="text-base sm:text-lg font-semibold mb-2">Chopped Chin Shirt</h3>
+                        <div class="flex justify-between items-center mb-3 sm:mb-4">
+                            <span class="text-green-700 font-bold text-sm sm:text-base">from $17</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-gray-600 text-sm">4.9</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="..." target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md text-sm sm:text-base">
+                                <span class="font-bold">Buy Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <button onclick="addToCart('choppedchinshirt')" class="w-16 sm:w-24 flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white px-2 sm:px-4 py-2 rounded-lg transition-colors shadow-md">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
             </div>
-        </section>   
+        </section>
         <script src="../cart.js"></script>
         <script src="../script.js"></script>
 </body>

@@ -7,6 +7,7 @@
 
 .product-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
 }
 
 .product-card:hover {
@@ -23,25 +24,45 @@
     border-radius: 50%;
     padding: 4px 8px;
     font-size: 12px;
+    will-change: transform;
+}
+
+.cart-badge:hover {
+    transform: scale(1.1);
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
+    will-change: grid-template-columns, gap;
 }
 
 @media (max-width: 768px) {
     .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.25rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.10rem;
     }
 }
 
