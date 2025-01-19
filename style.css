@@ -30,6 +30,18 @@
 .cart-badge:hover {
     transform: scale(1.1);
 }
+.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.product-grid-cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
 
 .product-grid {
     display: grid;
@@ -94,3 +106,4 @@
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.233);
 }
+
