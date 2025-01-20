@@ -6,7 +6,7 @@
     <link href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="../gambar/NOLYXHD.png">
+    <link rel="icon" href="gambar/NOLYXHD.png">
     <title>Nolyx Store</title>
 </head>
 <body class="bg-gradient-to-r from-green-600 to-green-800 bg-size-200 bg-pos-0 animation">
@@ -20,10 +20,10 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <button onclick="changeCategory('shirts')" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Shirts</button>
-                    <button onclick="changeCategory('hoodies')" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Hoodies</button>
-                    <button onclick="changeCategory('wallArt')" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Wall Art</button>
-                    <button onclick="changeCategory('caps')" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Caps</button>
+                    <a href="products.html?category=shirts" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Shirts</a>
+                    <a href="products.html?category=hoodies" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Hoodies</a>
+                    <a href="products.html?category=wallArt" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Wall Art</a>
+                    <a href="products.html?category=caps" class="font-medium text-gray-700 hover:text-green-700 transition-colors">Caps</a>
                     <div class="relative">
                         <a href="cart.html" class="text-gray-700 hover:text-green-700">
                             <i class="fas fa-shopping-cart text-xl"></i>
@@ -48,10 +48,10 @@
         <!-- Mobile Menu -->
         <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
             <div class="px-4 py-2 space-y-3">
-                <button onclick="changeCategory('shirts')" class="block w-full text-left py-2 text-gray-700 hover:text-green-700">Shirts</button>
-                <button onclick="changeCategory('hoodies')" class="block w-full text-left py-2 text-gray-700 hover:text-green-700">Hoodies</button>
-                <button onclick="changeCategory('wallArt')" class="block w-full text-left py-2 text-gray-700 hover:text-green-700">Wall Art</button>
-                <button onclick="changeCategory('caps')" class="block w-full text-left py-2 text-gray-700 hover:text-green-700">Caps</button>
+                <a href="products.html?category=shirts" class="block py-2 text-gray-700 hover:text-green-700">Shirts</a>
+                <a href="products.html?category=hoodies" class="block py-2 text-gray-700 hover:text-green-700">Hoodies</a>
+                <a href="products.html?category=wallArt" class="block py-2 text-gray-700 hover:text-green-700">Wall Art</a>
+                <a href="products.html?category=caps" class="block py-2 text-gray-700 hover:text-green-700">Caps</a>
                 <div class="py-2">
                     <a href="cart.html" class="flex items-center text-gray-700">
                         <i class="fas fa-shopping-cart mr-2"></i>
@@ -67,6 +67,7 @@
             </div>
         </div>
     </nav>
+    
 
     <section class="hero-section h-96 flex items-center justify-center text-white mt-16">
         <div id="vermin"  class="text-center">
@@ -74,11 +75,59 @@
         </div>
     </section>
 
-    <section class="product py-8 md:py-16 max-w-7xl mx-auto px-4">
-        <div id="product-grid" class="product-grid">
-            <!-- Products will be dynamically inserted here -->
+    <!-- ... kode navbar dan hero section tetap sama ... -->
+
+<section class="max-w-7xl mx-auto px-4 mt-8">
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <div class="grid grid-cols-1 gap-4">
+            <!-- Search by name -->
+            <div class="relative">
+                <label for="searchName" class="block text-sm font-medium text-gray-700 mb-1">Cari Berdasarkan Nama:</label>
+                <input 
+                    type="text" 
+                    id="searchName" 
+                    class="w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
+                    placeholder="Masukkan nama produk..."
+                >
+            </div>
+            
+            <!-- Search by category -->
+            <div class="relative hidden">
+                <label for="searchCategory" class="block text-sm font-medium text-gray-700 mb-1">Pilih Kategori:</label>
+                <select 
+                    id="searchCategory" 
+                    class="w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
+                >
+                    <option value="all">Semua Kategori</option>
+                    <option value="shirts">Shirts</option>
+                    <option value="hoodies">Hoodies</option>
+                    <option value="wallArt">Wall Art</option>
+                    <option value="caps">Caps</option>
+                </select>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section class="product py-8 md:py-16 max-w-7xl mx-auto px-4">
+    <!-- Search Results Info -->
+    <div id="searchInfo" class="mb-4 text-white hidden">
+        <p class="text-lg">Hasil pencarian untuk: <span id="searchTermDisplay" class="font-bold"></span></p>
+        <p>Ditemukan: <span id="resultCount" class="font-bold">0</span> produk</p>
+    </div>
+
+    <div id="product-grid" class="product-grid">
+        <!-- Products will be dynamically inserted here -->
+    </div>
+
+    <!-- No Results Message -->
+    <div id="noResults" class="hidden text-center text-white py-8">
+        <p class="text-xl">Tidak ada produk yang ditemukan</p>
+        <p class="mt-2">Coba kata kunci lain atau pilih kategori yang berbeda</p>
+    </div>
+</section>
+
+<!-- ... sisa kode tetap sama ... -->
 
     <script src="cart.js"></script>
     <script src="products.js"></script>

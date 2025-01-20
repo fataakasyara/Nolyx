@@ -48,17 +48,13 @@ const products = {
             rating: 4.9,
             buyLink: 'https://www.teepublic.com/hat/71215420-chopped-chin-memes',
         }
+        // Add cap products here with the same structure
     ]
 };
 
-// Initialize current category
-let currentCategory = 'shirts';
-
-// Function to change category
-function changeCategory(category) {
-    currentCategory = category;
-    updateCategoryTitle(category);
-    renderProducts();
+function getUrlParameter(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
 }
 
 // Function to update category title
@@ -68,27 +64,19 @@ function updateCategoryTitle(category) {
 }
 
 // Function to render products
-function renderProducts() {
+function renderProducts(category) {
     const productGrid = document.getElementById('product-grid');
-    const categoryProducts = products[currentCategory];
+    const categoryProducts = products[category] || products.shirts; // Default to shirts if category not found
     
     productGrid.innerHTML = categoryProducts.map(product => `
         <div id="${product.id}" class="product-card bg-white rounded-lg overflow-hidden shadow-md mx-auto w-full">
             <div class="relative">
                 <img src="${product.image}" alt="${product.title}" class="w-full h-48 sm:h-64 object-cover">
-                ${Math.random() < 0.33 ? `
+                ${product.isHot ? `
                     <div class="absolute top-2 right-2">
                         <span class="bg-red-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Hot</span>
                     </div>
-                ` : Math.random() < 0.66 ? `
-                    <div class="absolute top-2 right-2">
-                        <span class="bg-yellow-600 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Discount</span>
-                    </div>
-                ` : `
-                    <div class="absolute top-2 right-2">
-                        <span class="bg-green-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">New</span>
-                    </div>
-                `}
+                ` : ''}
             </div>
             <div class="p-3 sm:p-4">
                 <h3 class="text-base sm:text-lg font-semibold mb-2">${product.title}</h3>
@@ -124,6 +112,145 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.toggle('hidden');
     });
 
-    // Initialize the page with shirts category
-    renderProducts();
+    // Get category from URL parameter
+    const category = getUrlParameter('category') || 'shirts';
+    
+    // Update title and render products
+    updateCategoryTitle(category);
+    renderProducts(category);
+});
+
+// Product data tetap sama seperti sebelumnya...
+
+// Fungsi untuk menangani pencarian
+let allProducts = [];
+
+// Fungsi untuk mengumpulkan semua produk
+function collectAllProducts() {
+    allProducts = [];
+    for (const category in products) {
+        products[category].forEach(product => {
+            allProducts.push({
+                ...product,
+                category: category
+            });
+        });
+    }
+}
+
+// Fungsi untuk filter produk
+function filterProducts(searchTerm, category) {
+    searchTerm = searchTerm.toLowerCase();
+    let filteredProducts = allProducts;
+
+    // Filter berdasarkan kategori jika bukan 'all'
+    if (category !== 'all') {
+        filteredProducts = filteredProducts.filter(product => product.category === category);
+    }
+
+    // Filter berdasarkan nama jika ada search term
+    if (searchTerm) {
+        filteredProducts = filteredProducts.filter(product => 
+            product.title.toLowerCase().includes(searchTerm)
+        );
+    }
+
+    return filteredProducts;
+}
+
+// Fungsi untuk render hasil pencarian
+function renderSearchResults(searchTerm, category) {
+    const filteredProducts = filterProducts(searchTerm, category);
+    const productGrid = document.getElementById('product-grid');
+    const searchInfo = document.getElementById('searchInfo');
+    const noResults = document.getElementById('noResults');
+    const resultCount = document.getElementById('resultCount');
+    const searchTermDisplay = document.getElementById('searchTermDisplay');
+
+    // Update search info
+    if (searchTerm || category !== 'all') {
+        searchInfo.classList.remove('hidden');
+        searchTermDisplay.textContent = `${searchTerm} ${category !== 'all' ? `(${category})` : ''}`;
+        resultCount.textContent = filteredProducts.length;
+    } else {
+        searchInfo.classList.add('hidden');
+    }
+
+    // Show/hide no results message
+    if (filteredProducts.length === 0) {
+        noResults.classList.remove('hidden');
+        productGrid.classList.add('hidden');
+    } else {
+        noResults.classList.add('hidden');
+        productGrid.classList.remove('hidden');
+    }
+
+    // Render products
+    productGrid.innerHTML = filteredProducts.map(product => `
+ <div id="${product.id}" class="product-card bg-white rounded-lg overflow-hidden shadow-md mx-auto w-full">
+            <div class="relative">
+                <img src="${product.image}" alt="${product.title}" class="w-full h-48 sm:h-64 object-cover">
+                ${product.isHot ? `
+                    <div class="absolute top-2 right-2">
+                        <span class="bg-red-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Hot</span>
+                    </div>
+                ` : ''}
+            </div>
+            <div class="p-3 sm:p-4">
+                <h3 class="text-base sm:text-lg font-semibold mb-2">${product.title}</h3>
+                <div class="flex justify-between items-center mb-3 sm:mb-4">
+                    <span class="text-green-700 font-bold text-sm sm:text-base">from $${product.price}</span>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <span class="ml-1 text-gray-600 text-sm">${product.rating}</span>
+                    </div>
+                </div>
+                <div class="flex space-x-2">
+                    <a href="${product.buyLink}" target="_blank" 
+                       class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md text-sm sm:text-base">
+                        <span class="font-bold">Buy Now</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <button onclick="addToCart('${product.id}')" 
+                            class="w-16 sm:w-24 flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white px-2 sm:px-4 py-2 rounded-lg transition-colors shadow-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Event listeners untuk search
+document.addEventListener('DOMContentLoaded', () => {
+    // Inisialisasi semua produk
+    collectAllProducts();
+
+    // Get elements
+    const searchName = document.getElementById('searchName');
+    const searchCategory = document.getElementById('searchCategory');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Set initial category from URL
+    const urlCategory = getUrlParameter('category') || 'all';
+    searchCategory.value = urlCategory;
+
+    // Event listeners untuk pencarian
+    let searchTimeout;
+    searchName.addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            renderSearchResults(e.target.value, searchCategory.value);
+        }, 300); // Debounce 300ms
+    });
+
+    searchCategory.addEventListener('change', (e) => {
+        renderSearchResults(searchName.value, e.target.value);
+    });
+
+    // Mobile menu tetap sama seperti sebelumnya...
+
+    // Initial render
+    renderSearchResults('', searchCategory.value);
 });
