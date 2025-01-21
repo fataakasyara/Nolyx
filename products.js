@@ -23,7 +23,7 @@ const products = {
             id: 'choppedchinhoodie',
             title: 'Chopped Chin Hoodie',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--FDMijHw3--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_423/c_crop,g_north_west,h_620,w_465,x_-21,y_-32/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-412,y_-308/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737039054/production/designs/71215420_0.jpg',
-            price: 17,
+            price: 32,
             rating: 4.9,
             buyLink: 'https://www.teepublic.com/hoodie/71215420-chopped-chin-memes',
         },
@@ -31,7 +31,7 @@ const products = {
             id: 'eyeofrahhoodie',
             title: 'Eye of Rah Hoodie',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--Xo192-NQ--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_620,w_465,x_0,y_0/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-391,y_-276/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
-            price: 17,
+            price: 32,
             rating: 4.9,
             buyLink: 'https://www.teepublic.com/hoodie/71283381-eye-of-rah-memes-lock-in',
         }
@@ -44,7 +44,7 @@ const products = {
             id: 'choppedchincap',
             title: 'Chopped Chin Cap',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--BomiQhqp--/c_crop,x_10,y_10/c_fit,h_280/c_crop,g_north_west,h_280,w_528,x_-144,y_-4/l_misc:transparent_1260/fl_layer_apply,g_north_west,x_-510,y_-390/c_mfit,g_north_east,u_misc:d_dad_4_24/e_displace,fl_layer_apply,x_0,y_52/u_upload:v1716913655:production:blanks:zpfti9jshalzacqi5cqg/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737039054/production/designs/71215420_0.jpg',
-            price: 17,
+            price: 18,
             rating: 4.9,
             buyLink: 'https://www.teepublic.com/hat/71215420-chopped-chin-memes',
         }
@@ -89,7 +89,7 @@ function renderProducts(category) {
                 </div>
                 <div class="flex space-x-2">
                     <a href="${product.buyLink}" target="_blank" 
-                       class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md text-sm sm:text-base">
+                    class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md text-sm sm:text-base">
                         <span class="font-bold">Buy Now</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
