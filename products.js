@@ -49,6 +49,24 @@ const products = {
             buyLink: 'https://www.teepublic.com/hat/71215420-chopped-chin-memes',
         }
         // Add cap products here with the same structure
+    ],
+    totebag: [
+        {
+            id: 'alienlockbag',
+            title: 'Alien Locked In ToteBag ',
+            image: 'https://res.cloudinary.com/teepublic/image/private/s--wZSBc0ra--/c_crop,x_10,y_10/c_fit,h_846/c_crop,g_north_west,h_1007,w_1007,x_-279,y_-81/l_upload:v1507037313:production:blanks:n2pk899a8qrzxtz4tyvn/fl_layer_apply,g_north_west,x_-406,y_-212/b_rgb:000000/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737598038/production/designs/71519296_0.jpg',
+            price: 14,
+            rating: 3.5,
+            buyLink: 'https://www.teepublic.com/tote/71519296-alien-locked-in-2024-reels-meme',
+        },
+        {
+            id: 'eyeofrahbag',
+            title: 'Eye of Rah ToteBag',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--U1PcBgZR--/c_crop,x_10,y_10/c_fit,h_916/c_crop,g_north_west,h_1007,w_1007,x_-146,y_-45/l_upload:v1507037313:production:blanks:n2pk899a8qrzxtz4tyvn/fl_layer_apply,g_north_west,x_-273,y_-176/b_rgb:000000/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
+            price: 14,
+            rating: 3.5,
+            buyLink: 'https://www.teepublic.com/hoodie/71283381-eye-of-rah-memes-lock-in',
+        }
     ]
 };
 
@@ -66,17 +84,29 @@ function updateCategoryTitle(category) {
 // Function to render products
 function renderProducts(category) {
     const productGrid = document.getElementById('product-grid');
-    const categoryProducts = products[category] || products.shirts; // Default to shirts if category not found
+    const categoryProducts = products[category] || products.all; // Default to shirts if category not found
     
     productGrid.innerHTML = categoryProducts.map(product => `
         <div id="${product.id}" class="product-card bg-white rounded-lg overflow-hidden shadow-md mx-auto w-full">
             <div class="relative">
                 <img src="${product.image}" alt="${product.title}" class="w-full h-48 sm:h-64 object-cover">
-                ${product.isHot ? `
+                ${Math.random() < 0.25 ? `
                     <div class="absolute top-2 right-2">
                         <span class="bg-red-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Hot</span>
                     </div>
-                ` : ''}
+                ` : Math.random() < 0.5 ? `
+                    <div class="absolute top-2 right-2">
+                        <span class="bg-blue-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Discount</span>
+                    </div>
+                ` : Math.random() < 0.75 ? `
+                    <div class="absolute top-2 right-2">
+                        <span class="bg-green-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">New</span>
+                    </div>
+                ` : `
+                    <div class="absolute top-2 right-2">
+                        <span class="bg-yellow-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Flash Sale</span>
+                    </div>
+                `}
             </div>
             <div class="p-3 sm:p-4">
                 <h3 class="text-base sm:text-lg font-semibold mb-2">${product.title}</h3>
@@ -113,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Get category from URL parameter
-    const category = getUrlParameter('category') || 'shirts';
+    const category = getUrlParameter('category') || 'Design';
     
     // Update title and render products
     updateCategoryTitle(category);
@@ -190,11 +220,23 @@ function renderSearchResults(searchTerm, category) {
  <div id="${product.id}" class="product-card bg-white rounded-lg overflow-hidden shadow-md mx-auto w-full">
             <div class="relative">
                 <img src="${product.image}" alt="${product.title}" class="w-full h-48 sm:h-64 object-cover">
-                ${product.isHot ? `
+                ${Math.random() < 0.25 ? `
                     <div class="absolute top-2 right-2">
                         <span class="bg-red-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Hot</span>
                     </div>
-                ` : ''}
+                ` : Math.random() < 0.5 ? `
+                    <div class="absolute top-2 right-2">
+                        <span class="bg-blue-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Discount</span>
+                    </div>
+                ` : Math.random() < 0.75 ? `
+                    <div class="absolute top-2 right-2">
+                        <span class="bg-green-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">New</span>
+                    </div>
+                ` : `
+                    <div class="absolute top-2 right-2">
+                        <span class="bg-yellow-700 text-white px-2 py-1 rounded-full text-xs sm:text-sm">Flash Sale</span>
+                    </div>
+                `}
             </div>
             <div class="p-3 sm:p-4">
                 <h3 class="text-base sm:text-lg font-semibold mb-2">${product.title}</h3>
