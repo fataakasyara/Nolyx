@@ -19,6 +19,26 @@
             background-position: center;
 
         }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
     </style>
 </head>
 <body class="bg-gradient-to-r from-green-400 to-green-600 bg-size-200 bg-pos-0 animation" style="background-size: 200% 200%; background-position: 0% 0%; animation: gradient 2s ease infinite;
@@ -87,7 +107,7 @@
     <section class="hero-section h-96 flex items-center justify-center text-white mt-16">
         <div class="text-center">
             <h1 id="vermin" class="text-4xl md:text-6xl font-bold mb-4">Nolyx Design</h1>
-            <a href="#category" class="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full transition-colors">
+            <a href="products.html" class="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full transition-colors">
                 Shop Now
             </a>
         </div>
@@ -123,125 +143,100 @@
             </div>
         </div>
     </section>
-    <!-- Shirts Section -->
     <section id="fav" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-800">Best Seller</h2>
+                <h2 class="text-3xl font-bold text-gray-800">Best Sellers</h2>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                        <i class="fas fa-fire text-orange-500"></i>
+                        <span>Popular right now</span>
+                    </div>
+                </div>
             </div>
-            <div class="product-grid">
-                <!-- Product Card 1 -->
-                <div id="choppedchinshirt" class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="https://res.cloudinary.com/teepublic/image/private/s--v4O7h4ZI--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_428/c_crop,g_north_west,h_626,w_470,x_-21,y_-32/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-416,y_-357/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737039054/production/designs/71215420_0.jpg" alt="" class="w-full h-64 object-cover">
-                        <div class="absolute top-2 right-2">
-                            <span class="bg-green-700 text-white px-2 py-1 rounded-full text-sm">New</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Chopped Chin Shirt</h3>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-green-700 font-bold">from $17</span>
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <span class="ml-1 text-gray-600">4.5</span>
-                            </div>
-                        </div>
-                        <div class="flex space-x-2">
-                            <a href="https://www.teepublic.com/t-shirt/71215420-chopped-chin-memes?store_id=3706826" target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md">
-                                <span class="font-bold">Buy Now</span>
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <button onclick="addToCart('choppedchinshirt')"  class="w-24 flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
-                                <i class="fas fa-shopping-cart ml-2"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div id="eyeofrahtotebag" class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="https://res.cloudinary.com/teepublic/image/private/s--U1PcBgZR--/c_crop,x_10,y_10/c_fit,h_916/c_crop,g_north_west,h_1007,w_1007,x_-146,y_-45/l_upload:v1507037313:production:blanks:n2pk899a8qrzxtz4tyvn/fl_layer_apply,g_north_west,x_-273,y_-176/b_rgb:000000/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg" alt="" class="w-full h-64 object-cover">
-                        <div class="absolute top-2 right-2">
-                            <span class="bg-yellow-600 text-white px-2 py-1 rounded-full text-sm">Discount</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Eye of Rah Totebag</h3>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-green-700 font-bold">from $14</span>
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <span class="ml-1 text-gray-600">4.9</span>
-                            </div>
-                        </div>
-                        <div class="flex space-x-2">
-                            <a href="https://www.teepublic.com/tote/71283381-eye-of-rah-memes-lock-in" target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md">
-                                <span class="font-bold">Buy Now</span>
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <button onclick="addToCart('eyeofrahtotebag')"  class="w-24 flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
-                                <i class="fas fa-shopping-cart ml-2"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div id="" class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="" alt="" class="w-full h-64 object-cover">
-                        <div class="absolute top-2 right-2">
-                            <span class="bg-red-700 text-white px-2 py-1 rounded-full text-sm">Hot</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2"></h3>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-green-700 font-bold">from $</span>
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <span class="ml-1 text-gray-600">4.9</span>
-                            </div>
-                        </div>
-                        <div class="flex space-x-2">
-                            <a href="" target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md">
-                                <span class="font-bold">Buy Now</span>
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <button onclick="addToCart('')"  class="w-24 flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
-                                <i class="fas fa-shopping-cart ml-2"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div id="" class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="relative">
-                        <img src="" alt="" class="w-full h-64 object-cover">
-                        <div class="absolute top-2 right-2">
-                            <span class="bg-red-700 text-white px-2 py-1 rounded-full text-sm">Hot</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2"></h3>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-green-700 font-bold">from $</span>
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <span class="ml-1 text-gray-600">4.9</span>
-                            </div>
-                        </div>
-                        <div class="flex space-x-2">
-                            <a href="" target="_blank" class="w-full flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg transition-colors shadow-md">
-                                <span class="font-bold">Buy Now</span>
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <button onclick="addToCart('')"  class="w-24 flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors shadow-md">
-                                <i class="fas fa-shopping-cart ml-2"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div class="product-grid" id="best-sellers-container">
+                <!-- Products will be loaded here -->
             </div>
         </div>
     </section>
+
+    <!-- Load products.js first -->
+    <script src="products.js"></script>
+    
+    <!-- Main script -->
+    <script>
+        function loadBestSellers() {
+            // Flatten all products into a single array
+            const allProducts = [
+                ...products.shirts,
+                ...products.hoodies,
+                ...products.totebag,
+                ...products.caps.filter(cap => cap !== null) // Filter out any null entries
+            ].filter(product => product); // Filter out any undefined/null products
+
+            // Shuffle array
+            const shuffled = allProducts.sort(() => 0.5 - Math.random());
+            // Get first 4 items
+            const selectedProducts = shuffled.slice(0, 4);
+
+            // Labels and colors for badges
+            const labels = ['New', 'Hot', 'Trending', 'Best Seller'];
+            const labelColors = {
+                'New': 'bg-green-700',
+                'Hot': 'bg-red-600',
+                'Trending': 'bg-purple-600',
+                'Best Seller': 'bg-yellow-600'
+            };
+
+            // Get container
+            const container = document.getElementById('best-sellers-container');
+            
+            // Generate HTML for each product
+            const productsHTML = selectedProducts.map((product, index) => {
+                const label = labels[index];
+                return `
+                    <div id="${product.id}" class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl">
+                        <div class="relative">
+                            <img src="${product.image}" alt="${product.title}" class="w-full h-64 object-cover">
+                            <div class="absolute top-2 right-2">
+                                <span class="${labelColors[label]} text-white px-3 py-1 rounded-full text-sm font-medium">
+                                    ${label}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-3">${product.title}</h3>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-green-700 font-bold text-xl">from $${product.price}</span>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <span class="ml-1 text-gray-600">
+                                        ${(Math.random() * (5 - 4.3) + 4.3).toFixed(1)}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="${product.buyLink}" target="_blank" 
+                                   class="flex-1 flex items-center justify-center bg-green-700 hover:bg-green-800 text-white py-3 px-4 rounded-lg transition-colors shadow-md group">
+                                    <span class="font-bold group-hover:scale-105 transform transition-transform">Buy Now</span>
+                                </a>
+                                <button onclick="addToCart('${product.id}')" 
+                                        class="w-12 flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white py-3 px-3 rounded-lg transition-colors shadow-md group">
+                                    <i class="fas fa-shopping-cart group-hover:scale-110 transform transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Insert into container
+            container.innerHTML = productsHTML;
+        }
+
+        // Load best sellers when document is ready
+        document.addEventListener('DOMContentLoaded', loadBestSellers);
+    </script>
 
     <!-- Categories Preview -->
 
@@ -351,9 +346,7 @@
 
     </section>
 
- 
-
-
+    <script src="products.js"></script>
     <script src="script.js"></script>
     <script src="cart.js"></script>
 </body>
