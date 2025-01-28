@@ -5,14 +5,14 @@ const products = {
             id: 'choppedchinshirt',
             title: 'Chopped Chin Shirt',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--v4O7h4ZI--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_428/c_crop,g_north_west,h_626,w_470,x_-21,y_-32/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-416,y_-357/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737039054/production/designs/71215420_0.jpg',
-            price: 17,
+            price: 23,
             buyLink: 'https://www.teepublic.com/t-shirt/71215420-chopped-chin-memes',
         },
         {
             id: 'eyeofrahshirt',
             title: 'Eye of rah Shirt',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--RGCQRNDN--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
-            price: 17,
+            price: 23,
             buyLink: 'https://www.teepublic.com/t-shirt/71283381-eye-of-rah-memes-lock-in',
         }
     ],
@@ -21,14 +21,14 @@ const products = {
             id: 'choppedchinhoodie',
             title: 'Chopped Chin Hoodie',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--FDMijHw3--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_423/c_crop,g_north_west,h_620,w_465,x_-21,y_-32/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-412,y_-308/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737039054/production/designs/71215420_0.jpg',
-            price: 32,
+            price: 39,
             buyLink: 'https://www.teepublic.com/hoodie/71215420-chopped-chin-memes',
         },
         {
             id: 'eyeofrahhoodie',
             title: 'Eye of Rah Hoodie',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--Xo192-NQ--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_620,w_465,x_0,y_0/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-391,y_-276/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
-            price: 32,
+            price: 39,
             buyLink: 'https://www.teepublic.com/hoodie/71283381-eye-of-rah-memes-lock-in',
         }
     ],
@@ -40,7 +40,7 @@ const products = {
             id: 'choppedchincap',
             title: 'Chopped Chin Cap',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--BomiQhqp--/c_crop,x_10,y_10/c_fit,h_280/c_crop,g_north_west,h_280,w_528,x_-144,y_-4/l_misc:transparent_1260/fl_layer_apply,g_north_west,x_-510,y_-390/c_mfit,g_north_east,u_misc:d_dad_4_24/e_displace,fl_layer_apply,x_0,y_52/u_upload:v1716913655:production:blanks:zpfti9jshalzacqi5cqg/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737039054/production/designs/71215420_0.jpg',
-            price: 18,
+            price: 23,
             buyLink: 'https://www.teepublic.com/hat/71215420-chopped-chin-memes',
         }
         // Add cap products here with the same structure
@@ -50,28 +50,28 @@ const products = {
             id: 'alienlockbag',
             title: 'Alien Locked In ToteBag ',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--wZSBc0ra--/c_crop,x_10,y_10/c_fit,h_846/c_crop,g_north_west,h_1007,w_1007,x_-279,y_-81/l_upload:v1507037313:production:blanks:n2pk899a8qrzxtz4tyvn/fl_layer_apply,g_north_west,x_-406,y_-212/b_rgb:000000/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737598038/production/designs/71519296_0.jpg',
-            price: 14,
+            price: 20,
             buyLink: 'https://www.teepublic.com/tote/71519296-alien-locked-in-2024-reels-meme',
         },
         {
             id: 'eyeofrahbag',
             title: 'Eye of Rah ToteBag',
             image:'https://res.cloudinary.com/teepublic/image/private/s--U1PcBgZR--/c_crop,x_10,y_10/c_fit,h_916/c_crop,g_north_west,h_1007,w_1007,x_-146,y_-45/l_upload:v1507037313:production:blanks:n2pk899a8qrzxtz4tyvn/fl_layer_apply,g_north_west,x_-273,y_-176/b_rgb:000000/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
-            price: 14,
+            price: 20,
             buyLink: 'https://www.teepublic.com/hoodie/71283381-eye-of-rah-memes-lock-in',
         }
     ]
 };
 
 function getUrlParameter(name) {
-    const params = new URLSearchParams(window.location.search);
-    return params.get(name);
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
 }
 
 // Function to update category title
 function updateCategoryTitle(category) {
-    const title = document.getElementById('category-title');
-    title.textContent = `Nolyx ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+    const titleElement = document.getElementById('category-title');
+    titleElement.textContent = `Nolyx ${category[0].toUpperCase()}${category.slice(1)}`;
 }
 
 // Function to render products
@@ -107,7 +107,7 @@ function renderProducts(category) {
                     <span class="text-green-700 font-bold text-sm sm:text-base">from $${product.price}</span>
                     <div class="flex items-center">
                         <i class="fas fa-star text-yellow-400"></i>
-                        <span class="ml-1 text-gray-600 text-sm">${(Math.random() * (5 - 3 + 1) + 3).toFixed(1)}</span>
+                        <span class="ml-1 text-gray-600 text-sm">${(Math.random() * (4.0 - 3.0 + 1) + 3.0).toFixed(1)}</span>
                     </div>
                 </div>
                 <div class="flex space-x-2">
@@ -127,15 +127,10 @@ function renderProducts(category) {
 
 // Handle mobile menu
 document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
 
     // Get category from URL parameter
-    const category = getUrlParameter('category') || 'Design';
+    const category = getUrlParameter('category') ;
     
     // Update title and render products
     updateCategoryTitle(category);
@@ -236,7 +231,7 @@ function renderSearchResults(searchTerm, category) {
                     <span class="text-green-700 font-bold text-sm sm:text-base">from $${product.price}</span>
                     <div class="flex items-center">
                         <i class="fas fa-star text-yellow-400"></i>
-                        <span class="ml-1 text-gray-600 text-sm">${(Math.random() * (5 - 3 + 1) + 3).toFixed(1)}</span>
+                         <span class="ml-1 text-gray-600 text-sm">${(Math.random() * (4.0 - 3.0 + 1) + 3.0).toFixed(1)}</span>
                     </div>
                 </div>
                 <div class="flex space-x-2">

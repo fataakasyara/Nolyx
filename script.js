@@ -1,36 +1,4 @@
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
 
-mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
-
-// Close mobile menu when clicking menu items
-const mobileMenuItems = mobileMenu.querySelectorAll('a');
-mobileMenuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-    }
-});
-
-// Prevent menu from closing when clicking inside it
-mobileMenu.addEventListener('click', (e) => {
-    e.stopPropagation();
-});
-
-// Close mobile menu when scrolling
-window.addEventListener('scroll', () => {
-    if (!mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.add('hidden');
-    }
-});
 
 // Add smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -72,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const scrollButton = document.createElement('button');
-scrollButton.className = 'fixed bottom-4 right-4 bg-green-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transform transition-all duration-300 hover:bg-green-800 hover:scale-110 opacity-0 pointer-events-none';
+scrollButton.className = 'fixed bottom-4 right-4 bg-green-700 z-50 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transform transition-all duration-300 hover:bg-green-800 hover:scale-110 opacity-0 pointer-events-none';
 scrollButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
 document.body.appendChild(scrollButton);
 
@@ -87,3 +55,22 @@ window.addEventListener('scroll', () => {
 scrollButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+const button = document.querySelector('.mobile-menu-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+if (button && mobileMenu) {
+    button.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!mobileMenu.contains(event.target) && !button.contains(event.target)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+
+    window.addEventListener('scroll', function() {
+        mobileMenu.classList.add('hidden');
+    });
+}
+
