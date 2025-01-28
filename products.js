@@ -58,7 +58,7 @@ const products = {
             title: 'Eye of Rah ToteBag',
             image:'https://res.cloudinary.com/teepublic/image/private/s--U1PcBgZR--/c_crop,x_10,y_10/c_fit,h_916/c_crop,g_north_west,h_1007,w_1007,x_-146,y_-45/l_upload:v1507037313:production:blanks:n2pk899a8qrzxtz4tyvn/fl_layer_apply,g_north_west,x_-273,y_-176/b_rgb:000000/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
             price: 20,
-            buyLink: 'https://www.teepublic.com/hoodie/71283381-eye-of-rah-memes-lock-in',
+            buyLink: 'https://www.teepublic.com/tote/71283381-eye-of-rah-memes-lock-in',
         }
     ]
 };
