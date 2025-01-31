@@ -74,3 +74,16 @@ if (button && mobileMenu) {
     });
 }
 
+
+function copyLink() {
+    var link = "https://t.me/YonKasyura?text=Halo%20designer%20saya%20ingin%20request%20sebuah%20design";
+    navigator.clipboard.writeText(link);
+    Swal.fire({
+        toast: true,
+        position: 'top',
+        icon: 'success',
+        title: 'Link copied to clipboard',
+        showConfirmButton: false,
+        timer: 1500
+    });
+}

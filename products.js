@@ -9,6 +9,13 @@ const products = {
             buyLink: 'https://www.teepublic.com/t-shirt/71215420-chopped-chin-memes',
         },
         {
+            id: 'alienlockshirt',
+            title: 'Alien Locked In Shirt ',
+            image: 'https://res.cloudinary.com/teepublic/image/private/s--IxQBmvB7--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_626/c_crop,g_north_west,h_626,w_470,x_-68,y_0/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-463,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737598038/production/designs/71519296_0.jpg',
+            price: 23,
+            buyLink: 'https://www.teepublic.com/t-shirt/71519296-alien-locked-in-2024-reels-meme',
+        },
+        {
             id: 'eyeofrahshirt',
             title: 'Eye of rah Shirt',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--RGCQRNDN--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
@@ -30,10 +37,23 @@ const products = {
             image: 'https://res.cloudinary.com/teepublic/image/private/s--Xo192-NQ--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_620,w_465,x_0,y_0/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-391,y_-276/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
             price: 39,
             buyLink: 'https://www.teepublic.com/hoodie/71283381-eye-of-rah-memes-lock-in',
+        },
+        {
+            id: 'iamliarhoodie',
+            title: 'I Am Liar Hoodie',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--8rp6FSDY--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_589/c_crop,g_north_west,h_620,w_465,x_-120,y_-16/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-511,y_-292/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738125706/production/designs/71727606_0.jpg',
+            price: 39,
+            buyLink: 'https://www.teepublic.com/hoodie/71727606-i-am-liar-i-am-music',
         }
     ],
-    wallArt: [
-        // Add wall art products here with the same structure
+    tanktop: [
+        {
+            id: 'iamliartanktop',
+            title: 'I Am Liar Tank Top',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--LzIfw8Aa--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_479/c_crop,g_north_west,h_504,w_378,x_-97,y_-13/g_north_west,u_upload:v1458945136:production:blanks:komu2zf243wdtgnibvrn,x_-547,y_-405/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738125706/production/designs/71727606_0.jpg',
+            price: 20,
+            buyLink: 'https://www.teepublic.com/tank-top/71727606-i-am-liar-i-am-music',
+        }
     ],
     caps: [
         {
@@ -43,7 +63,6 @@ const products = {
             price: 23,
             buyLink: 'https://www.teepublic.com/hat/71215420-chopped-chin-memes',
         }
-        // Add cap products here with the same structure
     ],
     totebag: [
         {
