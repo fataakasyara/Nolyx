@@ -64,6 +64,15 @@ const products = {
             buyLink: 'https://www.teepublic.com/hat/71215420-chopped-chin-memes',
         }
     ],
+    sweatshirt: [
+        {
+            id: 'fishrocksweatshirt',
+            title: 'There is Sea under the rock Sweatshirt',
+            image: 'https://res.cloudinary.com/teepublic/image/private/s--dk3HJjfm--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_544,w_409,x_0,y_0/g_north_west,u_upload:v1561483906:production:blanks:nvgy11lefnvjtfxu6kaw,x_-428,y_-347/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738327228/production/designs/71804962_0.jpg',
+            price: 35,
+            buyLink: 'https://www.teepublic.com/crewneck-sweatshirt/71804962-there-is-sea-under-the-rock',
+        }
+    ],
     totebag: [
         {
             id: 'alienlockbag',

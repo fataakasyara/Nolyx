@@ -87,3 +87,4 @@ function copyLink() {
         timer: 1500
     });
 }
+
