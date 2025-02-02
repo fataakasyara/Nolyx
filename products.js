@@ -3,31 +3,38 @@ const products = {
     shirts: [
         {
             id: 'choppedchinshirt',
-            title: 'Chopped Chin Shirt',
+            title: 'Chopped Chin T-Shirt',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--v4O7h4ZI--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_428/c_crop,g_north_west,h_626,w_470,x_-21,y_-32/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-416,y_-357/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737039054/production/designs/71215420_0.jpg',
             price: 23,
             buyLink: 'https://www.teepublic.com/t-shirt/71215420-chopped-chin-memes',
         },
         {
             id: 'alienlockshirt',
-            title: 'Alien Locked In Shirt ',
+            title: 'Alien Locked In T-Shirt ',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--IxQBmvB7--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_626/c_crop,g_north_west,h_626,w_470,x_-68,y_0/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-463,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737598038/production/designs/71519296_0.jpg',
             price: 23,
             buyLink: 'https://www.teepublic.com/t-shirt/71519296-alien-locked-in-2024-reels-meme',
         },
         {
             id: 'eyeofrahshirt',
-            title: 'Eye of rah Shirt',
+            title: 'Eye of rah T-Shirt',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--RGCQRNDN--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
             price: 23,
             buyLink: 'https://www.teepublic.com/t-shirt/71283381-eye-of-rah-memes-lock-in',
         },
         {
             id: 'fishrockshirt',
-            title: 'There is Sea Under the Rock Shirt',
+            title: 'There is Sea Under the Rock T-Shirt',
             image: 'https://res.cloudinary.com/teepublic/image/private/s--NPRzTfB3--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738327228/production/designs/71804962_0.jpg',
             price: 23,
             buyLink: 'https://www.teepublic.com/t-shirt/71804962-there-is-sea-under-the-rock',
+        },
+        {
+            id: 'greatchaosshirt',
+            title: 'The Great Chaos Ken Carson T-shirt',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--Xj0MXf6W--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829024:production:blanks:a59x1cgomgu5lprfjlmi,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738460377/production/designs/71857723_0.jpg',
+            price: 23,
+            buyLink: 'https://www.teepublic.com/t-shirt/71857723-the-great-chaos-ken-carson-opium',
         }
     ],
     hoodies: [
@@ -69,6 +76,13 @@ const products = {
             image: 'https://res.cloudinary.com/teepublic/image/private/s--BomiQhqp--/c_crop,x_10,y_10/c_fit,h_280/c_crop,g_north_west,h_280,w_528,x_-144,y_-4/l_misc:transparent_1260/fl_layer_apply,g_north_west,x_-510,y_-390/c_mfit,g_north_east,u_misc:d_dad_4_24/e_displace,fl_layer_apply,x_0,y_52/u_upload:v1716913655:production:blanks:zpfti9jshalzacqi5cqg/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737039054/production/designs/71215420_0.jpg',
             price: 23,
             buyLink: 'https://www.teepublic.com/hat/71215420-chopped-chin-memes',
+        },
+        {
+            id: 'greatchaoscap',
+            title: 'The Great Chaos Ken Carson Cap',
+            image: 'https://res.cloudinary.com/teepublic/image/private/s--ZtvX3lx6--/c_crop,x_10,y_10/c_fit,h_280/c_crop,g_north_west,h_280,w_528,x_-130,y_0/l_misc:transparent_1260/fl_layer_apply,g_north_west,x_-496,y_-386/c_mfit,g_north_east,u_misc:d_dad_4_24/e_displace,fl_layer_apply,x_0,y_52/u_upload:v1716913653:production:blanks:wjq11hize8qbuup8bsvf/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738460377/production/designs/71857723_0.jpg',
+            price: 23,
+            buyLink: 'https://www.teepublic.com/hat/71857723-the-great-chaos-ken-carson-opium',
         }
     ],
     sweatshirt: [
