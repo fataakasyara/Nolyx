@@ -35,6 +35,34 @@ const products = {
             image:'https://res.cloudinary.com/teepublic/image/private/s--Xj0MXf6W--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829024:production:blanks:a59x1cgomgu5lprfjlmi,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738460377/production/designs/71857723_0.jpg',
             price: 23,
             buyLink: 'https://www.teepublic.com/t-shirt/71857723-the-great-chaos-ken-carson-opium',
+        },
+        {
+            id : 'homixidegangshirt',
+            title: 'Homixide Gang T-Shirt',
+            image : 'https://res.cloudinary.com/teepublic/image/private/s--OhwOs-mO--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_626,w_470,x_-11,y_-61/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-406,y_-386/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738720846/production/designs/71986303_0.jpg',
+            price: 23,
+            buyLink: 'https://www.teepublic.com/t-shirt/71986303-homixide-gang-opium',
+        },
+        {
+            id : 'johnporkmeltshirt',
+            title: 'John Pork melting T-Shirt',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--8hskRN0B--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_613/c_crop,g_north_west,h_626,w_470,x_-49,y_-6/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-444,y_-331/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738459906/production/designs/71857570_0.jpg',
+            price: 23,
+            buyLink: 'https://www.teepublic.com/t-shirt/71857570-john-pork-melt',
+        },
+        {
+            id : 'johnporkmeltkidshirt',
+            title: 'John Pork melting kid T-Shirt',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--vyUkrqTV--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_543/c_crop,g_north_west,h_554,w_416,x_-43,y_-6/g_north_west,u_upload:v1446840606:production:blanks:swq1z7pyszdblujxb6qi,x_-467,y_-331/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738459906/production/designs/71857570_0.jpg',
+            price: 19,
+            buyLink: 'https://www.teepublic.com/t-shirt/71857570-john-pork-melt',
+        },
+        {
+            id : 'eyeofrahkidshirt',
+            title: 'Eye of Rah kid T-Shirt',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--N2D3hPZm--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_416/c_crop,g_north_west,h_554,w_416,x_0,y_0/g_north_west,u_upload:v1446840606:production:blanks:swq1z7pyszdblujxb6qi,x_-424,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1737168483/production/designs/71283381_0.jpg',
+            price: 19,
+            buyLink: 'https://www.teepublic.com/t-shirt/71283381-eye-of-rah-opium',
         }
     ],
     hoodies: [
@@ -58,6 +86,20 @@ const products = {
             image:'https://res.cloudinary.com/teepublic/image/private/s--8rp6FSDY--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_589/c_crop,g_north_west,h_620,w_465,x_-120,y_-16/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-511,y_-292/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738125706/production/designs/71727606_0.jpg',
             price: 39,
             buyLink: 'https://www.teepublic.com/hoodie/71727606-i-am-liar-i-am-music',
+        },
+        {
+            id: 'homixideganghoodie',
+            title: 'Homixide Gang Hoodie',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--py82g-lv--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_460/c_crop,g_north_west,h_620,w_465,x_-11,y_-61/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-402,y_-337/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738720846/production/designs/71986303_0.jpg',
+            price: 39,
+            buyLink: 'https://www.teepublic.com/hoodie/71986303-homixide-gang-opium',
+        },
+        {
+            id: 'johnporkmelthoodie',
+            title: 'John Pork Melt Hoodie',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--n_rnd7TK--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_608/c_crop,g_north_west,h_620,w_465,x_-48,y_-6/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-439,y_-282/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738459906/production/designs/71857570_0.jpg',
+            price: 39,
+            buyLink: 'https://www.teepublic.com/hoodie/71857570-john-pork-melt',
         }
     ],
     tanktop: [
@@ -83,6 +125,13 @@ const products = {
             image: 'https://res.cloudinary.com/teepublic/image/private/s--ZtvX3lx6--/c_crop,x_10,y_10/c_fit,h_280/c_crop,g_north_west,h_280,w_528,x_-130,y_0/l_misc:transparent_1260/fl_layer_apply,g_north_west,x_-496,y_-386/c_mfit,g_north_east,u_misc:d_dad_4_24/e_displace,fl_layer_apply,x_0,y_52/u_upload:v1716913653:production:blanks:wjq11hize8qbuup8bsvf/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738460377/production/designs/71857723_0.jpg',
             price: 23,
             buyLink: 'https://www.teepublic.com/hat/71857723-the-great-chaos-ken-carson-opium',
+        },
+        {
+            id: 'homixidegangcap',
+            title: 'Homixide Gang Cap',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--QkaojAVU--/c_crop,x_10,y_10/c_fit,w_528/c_crop,g_north_west,h_280,w_528,x_0,y_-118/l_misc:transparent_1260/fl_layer_apply,g_north_west,x_-366,y_-504/c_mfit,g_north_east,u_misc:d_dad_4_24/e_displace,fl_layer_apply,x_0,y_52/u_upload:v1716913655:production:blanks:zpfti9jshalzacqi5cqg/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1738720846/production/designs/71986303_0.jpg',
+            price: 23,
+            buyLink: 'https://www.teepublic.com/hat/71986303-homixide-gang-opium',
         }
     ],
     sweatshirt: [
